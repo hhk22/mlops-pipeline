@@ -8,6 +8,8 @@
 
 5. References
 
+- https://www.notion.so/MLOps-a1bc4fd039ef40fa88b414772337abc2?pvs=3&qid=
+
 
 ## Airflow (데이터 수집)
 
@@ -18,8 +20,8 @@ Airflow(gcp-composer) 에서 작업했으며, 실행파일들의 일부분을 �
 
 ## Model Piepline (모델 훈련 및 배포)
 
-VertexAI에서 모델 훈련 및 배포하는 파이프라인 구조. 
-Bigquery -> GCS -> Model Training -> Endpoint(Vertex AI) 로 이루어진 파이프라인. 
+VertexAI에서 모델 훈련 및 배포하는 파이프라인 구조.  
+Bigquery -> GCS -> Model Training -> Endpoint(Vertex AI) 로 이루어진 파이프라인.  
 실행을 위해서는 package 설치와, 각 resource에 대한 접근권한을 가진 google credential json 파일이 필요하다. 
 
 - Pipeline: ~/VertexAI_pipeline.ipynb
