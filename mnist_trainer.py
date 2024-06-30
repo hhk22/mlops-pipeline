@@ -62,7 +62,7 @@ def train():
 def save_model():
     model_path = "model.pth"
     torch.save(model.state_dict(), model_path)
-    print(f"Model saved to {model_path}")
+    print(f"Model saved to 11 {model_path}")
 
 
 if __name__ == "__main__":
