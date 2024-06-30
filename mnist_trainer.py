@@ -21,6 +21,7 @@ train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=
 test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False)
 
 
+
 class NeuralNet(nn.Module):
     def __init__(self):
         super(NeuralNet, self).__init__()
