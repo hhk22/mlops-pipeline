@@ -31,16 +31,16 @@ jobs:
 
       - name: Formatting with black
         run: |
-          black --check .
+          black --check ./cicd_pipeline/ci_pipeline/
 
       - name: Run isort for import sorting
-        run: isort --check-only .
+        run: isort --check-only ./cicd_pipeline/ci_pipeline/
 
       - name: Type Checking with Mypy
-        run: mypy .
+        run: mypy ./cicd_pipeline/ci_pipeline/
 
       - name: Run tests with Pytest
-        run: pytest .
+        run: pytest ./cicd_pipeline/ci_pipeline/
 
       - name: Check code coverage with pytest-cov
-        run: pytest --cov=. --cov-report=term-missing --cov-fail-under=70 ./tests
+        run: pytest --cov=./cicd_pipeline/ci_pipeline/ --cov-report=term-missing --cov-fail-under=70 ./cicd_pipeline/ci_pipeline/tests
