@@ -33,6 +33,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_PYTHON_BLACK: true
           PYTHON_BLACK_CONFIG: "--check --diff"
+        with:
+          default-directory: "./cicd_pipeline/ci_pipeline/"
 
       - name: Run isort for import sorting
         run: isort --check-only ./cicd_pipeline/ci_pipeline
