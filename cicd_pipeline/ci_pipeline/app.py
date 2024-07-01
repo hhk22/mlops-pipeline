@@ -11,7 +11,7 @@ model: XORModel = XORModel()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global model
-    model.load_state_dict(torch.load("xor_model.pth"))
+    model.load_state_dict(torch.load("./cicd_pipeline/ci_pipeline/xor_model.pth"))
     model.eval()
     yield
 

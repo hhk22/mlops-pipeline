@@ -21,6 +21,6 @@ if __name__ == "__main__":
         if epoch % 100 == 0:
             print(f"Epoch [{epoch+1}/1000] Loss: {loss.item():.4f}")
 
-    model_name = "xor_model.pth"
+    model_name = "./cicd_pipeline/ci_pipeline/xor_model.pth"
     torch.save(model.state_dict(), model_name)
     print(f"Model saved to {model_name}")

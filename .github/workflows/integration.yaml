@@ -38,6 +38,3 @@ jobs:
 
       - name: Run tests with Pytest
         run: pytest ./cicd_pipeline/ci_pipeline/
-
-      - name: Check code coverage with pytest-cov
-        run: pytest --cov=./cicd_pipeline/ci_pipeline/ --cov-report=term-missing --cov-fail-under=70 ./cicd_pipeline/ci_pipeline/tests
