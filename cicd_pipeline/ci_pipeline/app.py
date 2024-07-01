@@ -2,7 +2,6 @@ from contextlib import asynccontextmanager
 
 import torch
 from fastapi import FastAPI
-
 from ml_models.xor import XORModel
 from models.xor import XORInput
 

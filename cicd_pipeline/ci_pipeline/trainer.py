@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-
 from ml_models.xor import XORModel
 
 if __name__ == "__main__":

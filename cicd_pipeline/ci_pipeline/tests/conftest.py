@@ -2,9 +2,8 @@ from typing import Generator
 from unittest.mock import MagicMock, patch
 
 import pytest
-from fastapi.testclient import TestClient
-
 from app import app
+from fastapi.testclient import TestClient
 
 
 @pytest.fixture(scope="module")
