@@ -5,9 +5,9 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
 input_size = 784
-hidden_size = 128
+hidden_size = 64
 num_classes = 10
-num_epochs = 5
+num_epochs = 2
 batch_size = 100
 learning_rate = 0.001
 
@@ -63,7 +63,7 @@ def train():
 def save_model():
     model_path = "model.pth"
     torch.save(model.state_dict(), model_path)
-    print(f"Model saved to 11 {model_path}")
+    print(f"Model saved to {model_path}")
 
 
 if __name__ == "__main__":

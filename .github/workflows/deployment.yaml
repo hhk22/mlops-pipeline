@@ -3,7 +3,7 @@ name: Deployment
 on:
   push:
     branches:
-      - master
+      - test/cd
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
@@ -34,7 +34,7 @@ jobs:
       - name: Build and push Docker image to Artifact Registry
         run: |
           gcloud auth configure-docker $REGION-docker.pkg.dev
-          docker build -t $REGION-docker.pkg.dev/$PROJECT_ID/$ARTIFACT_REPO_NAME/$CUSTOM_IMAGE:${{ steps.slug.outputs.sha }} .
+          docker build -t $REGION-docker.pkg.dev/$PROJECT_ID/$ARTIFACT_REPO_NAME/$CUSTOM_IMAGE:${{ steps.slug.outputs.sha }} ./cicd_pipeline/cd_pipeline
           docker push $REGION-docker.pkg.dev/$PROJECT_ID/$ARTIFACT_REPO_NAME/$CUSTOM_IMAGE:${{ steps.slug.outputs.sha }}
 
   deploy-to-vertex-ai:

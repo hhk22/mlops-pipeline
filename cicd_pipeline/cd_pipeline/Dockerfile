@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python", "mnist_trainer.py"]
+CMD ["python", "cicd_pipeline/cicd_pipeline/mnist_trainer.py"]
