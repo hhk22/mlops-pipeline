@@ -11,9 +11,11 @@
 
 ## CICD Pipeline
 
-- CICD pipeline
-    - CI Path: cicd_pipeline/ci_pipeline/*
-    - CD Path: cicd_pipeline/cd_pipeline/*
+- ci : black, isort, mypy, pytest 를 통한 코드 검수. 
+- cd : 해당 모델을 vertext ai training job을 통해 모델을 훈련시키고 gcs에 저장. 
+
+- ci Path: cicd_pipeline/ci_pipeline/*
+- cd Path: cicd_pipeline/cd_pipeline/*
 
 Notion
 
